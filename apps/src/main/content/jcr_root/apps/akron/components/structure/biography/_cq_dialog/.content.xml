@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Biography Page"
+    mode="edit">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <biograpy
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Biography"
+                        sling:orderAfter="advanced"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fieldset
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Biography Details"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <image
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Biography Image"
+                                                        name="./bioImage"
+                                                        rootPath="/content/dam"
+                                                        required="{Boolean}true"/>
+                                                    <imageAltText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Bio Image Alternative Text"
+                                                        fieldDescription="Provide a textual alternative of the content and function of the image."
+                                                        required="{Boolean}true"
+                                                        name="./bioImageAltText"/>
+                                                    <job
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Job Title"
+                                                        required="{Boolean}true"
+                                                        maxlength="50"
+                                                        fieldDescription="Limit of 50 characters"
+                                                        name="./job"/>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </fieldset>
+                                </items>
+                            </column>
+                        </items>
+                    </biograpy>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

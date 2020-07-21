@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <clientlib-all/>
+    <clientlib-ui/>
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Akron Design"
+        sling:resourceType="wcm/core/components/designer">
+        <page jcr:primaryType="nt:unstructured">
+            <ak-par
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Full]">
+            </ak-par>
+            <ak-container-par
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Content]">
+            </ak-container-par>
+            <ak-grid-row-par-1
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Content]">
+            </ak-grid-row-par-1>
+            <ak-grid-row-par-2
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Content]">
+            </ak-grid-row-par-2>
+            <ak-grid-row-par-3
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Content]">
+            </ak-grid-row-par-3>
+            <ak-tab-par-1
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Full]">
+            </ak-tab-par-1>
+            <ak-tab-par-2
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Full]">
+            </ak-tab-par-2>
+            <ak-tab-par-3
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Full]">
+            </ak-tab-par-3>
+            <ak-tab-par-4
+                jcr:primaryType="nt:unstructured"
+                components="[group:Akron - Full]">
+            </ak-tab-par-4>
+            <ak-biography-par
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/content/ak-title,akron/components/content/ak-text,akron/components/content/ak-subtitle,akron/components/content/ak-space]">
+            </ak-biography-par>
+            <ak-article-par
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/content/ak-title,akron/components/content/ak-text,akron/components/content/ak-subtitle,akron/components/content/ak-space]">
+            </ak-article-par>
+            <ak-faq-par
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/content/ak-title,akron/components/content/ak-text,akron/components/content/ak-subtitle,akron/components/content/ak-space]">
+            </ak-faq-par>
+            <ak-faq-category
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/content/ak-title,akron/components/content/ak-text,akron/components/content/ak-subtitle,akron/components/content/ak-space]">
+            </ak-faq-category>
+            <ak-edc-par
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/data/ak-edc-details]">
+            </ak-edc-par>
+            <ak-offer-par
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/data/ak-offer]">
+            </ak-offer-par>
+            <ak-gas-offer-par
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/data/ak-gas-offer]">
+            </ak-gas-offer-par>
+            <ak-bundle-offer-par
+                jcr:primaryType="nt:unstructured"
+                components="[akron/components/data/ak-bundle-offer]">
+            </ak-bundle-offer-par>
+        </page>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Template"
+    jcr:title="Akron - Search Page"
+    cq:designPath="/apps/settings/wcm/designs/akron"
+    allowedPaths="[/content/akron/(.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="akron/components/structure/page">
+        <ak-par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <ak-search-page
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="akron/components/full/ak-search-page"/>
+        </ak-par>
+    </jcr:content>
+</jcr:root>

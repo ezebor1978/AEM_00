@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Content Page"
+    mode="edit">
+<content jcr:primaryType="nt:unstructured">
+    <items jcr:primaryType="nt:unstructured">
+        <tabs jcr:primaryType="nt:unstructured">
+            <items jcr:primaryType="nt:unstructured">
+                <errors
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Errors"
+                    sling:orderBefore="advanced"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <fieldset
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Error Pages - Configuration"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <errorpages
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Error Pages"
+                                                    name="./errorPages"
+                                                    rootPath="/content"
+                                                    cq:showOnCreate="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </fieldset>
+                            </items>
+                        </column>
+                    </items>
+                </errors>
+                <searchOptions
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Search Options"
+                    sling:orderBefore="advanced"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <fieldset
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Search Options"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <hideLens
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    text="Hide Search Bar"
+                                                    name="./hideSearchBar"
+                                                    value="true"
+                                                    checked="{Boolean}false"/>
+                                                <excludeFromSearch
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    text="Hide page from Search Engines. Page won't be indexed by search engines such as Google or Swiftype"
+                                                    name="./excludeFromSearch"
+                                                    value="true"
+                                                    checked="{Boolean}false"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </fieldset>
+                            </items>
+                        </column>
+                    </items>
+                </searchOptions>
+            </items>
+        </tabs>
+    </items>
+</content>
+</jcr:root>

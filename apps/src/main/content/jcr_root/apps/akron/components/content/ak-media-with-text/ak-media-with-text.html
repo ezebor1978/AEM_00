@@ -1,0 +1,13 @@
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-unwrap>
+    <ak-media-with-text
+        data-sly-test="${properties.title}"
+        data-sly-use.parser="com.energyharbor.akron.core.services.DialogDataParser"
+        aem-data="${parser.data}">
+    </ak-media-with-text>
+    <sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"></sly>
+</sly>
+
+
+

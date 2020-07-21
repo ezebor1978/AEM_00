@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html data-sly-use.page="page.js" lang="${currentPage.language.language}">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <style>
+            /* Stops the FOUC */
+            html {
+                visibility: hidden;
+                opacity:0;
+            }
+        </style>
+        <sly data-sly-include="partials/head.html" data-sly-unwrap/>
+        <sly data-sly-include="partials/headlibs.html" data-sly-unwrap/>
+    </head>
+    <body data-wcm-mode="${wcmmode.toString}" data-page-path="${page.pagePath}">
+        <sly data-sly-include="partials/main.html" data-sly-unwrap/>
+        <sly data-sly-include="partials/footlibs.html" data-sly-unwrap/>
+    </body>
+
+    <style>
+        html {
+            visibility: visible;
+            opacity:1;
+        }
+    </style>
+</html>

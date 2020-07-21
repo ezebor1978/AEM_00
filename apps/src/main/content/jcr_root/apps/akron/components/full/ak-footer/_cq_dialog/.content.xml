@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Footer"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <navigation
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Main Navigation"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <mainCategories
+                                                jcr:primaryType="nt:unstructured"
+                                                validation="multifield-max-5"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                required="{Boolean}true"
+                                                fieldLabel="Items">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./multifieldCategories">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <category
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Category"
+                                                                    fieldDescription="Limit of 20 characters."
+                                                                    maxlength="20"
+                                                                    required="{Boolean}true"
+                                                                    name="./category"/>
+                                                                <navigationItems
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                    composite="{Boolean}true"
+                                                                    required="{Boolean}true"
+                                                                    fieldLabel="Navigation Items">
+                                                                    <field
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                        name="./multifieldNavigationItems">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <column
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <name
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                        fieldLabel="Text"
+                                                                                        fieldDescription="Limit of 35 characters."
+                                                                                        maxlength="35"
+                                                                                        required="{Boolean}true"
+                                                                                        name="./text"/>
+                                                                                    <link
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                        fieldLabel="URL"
+                                                                                        required="{Boolean}true"
+                                                                                        rootPath="/content/akron"
+                                                                                        name="./url"/>
+                                                                                    <target
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                                        fieldLabel="Target"
+                                                                                        name="./target">
+                                                                                        <datasource
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="akron/datasources/dropdown"
+                                                                                            path="/apps/akron/dialogs/options/target-options"
+                                                                                            defaultValueSelected="internal"/>
+                                                                                    </target>
+                                                                                </items>
+                                                                            </column>
+                                                                        </items>
+                                                                    </field>
+                                                                </navigationItems>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </mainCategories>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </navigation>
+                    <extra
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Additional Information"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <logoIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Logo"
+                                                fileNameParameter="./fileNameLogoIcon"
+                                                fileReferenceParameter="./logoIcon"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileLogoIcon"
+                                                uploadUrl="${suffix.path}"
+                                                required="{Boolean}true"
+                                                useHTML5="{Boolean}true"/>
+                                            <logoAltText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldLabel="Logo Alt Text"
+                                                fieldDescription="Alternate text for accessibility purposes (If empty, 'Logo' will be used)"
+                                                name="./logoAltText"/>
+                                            <logoUrl
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                fieldLabel="Logo Url"
+                                                rootPath="/content/akron"
+                                                required="{Boolean}true"
+                                                name="./logoUrl"/>
+                                            <contactInfo
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Contact Info"
+                                                fieldDescription="Limit of 25 characters"
+                                                maxlength="25"
+                                                required="{Boolean}true"
+                                                name="./contactInfo" />
+                                            <contactPhone
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Contact Phone"
+                                                fieldDescription="The Phone number has to follow this format: 1-XXX-XXX-XXXX"
+                                                required="{Boolean}true"
+                                                name="./contactPhone">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-phone-number-validation="true">
+                                                </granite:data>
+                                            </contactPhone>
+                                            <contactIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Contact Icon"
+                                                fieldDescription="The size of the icon must be 24x24"
+                                                fileNameParameter="./fileNameContactIcon"
+                                                fileReferenceParameter="./contactIcon"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileContactIcon"
+                                                uploadUrl="${suffix.path}"
+                                                required="{Boolean}true"
+                                                useHTML5="{Boolean}true"/>
+                                            <optionalContactInfo
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Optional Contact Info"
+                                                fieldDescription="Limit of 25 characters"
+                                                maxlength="25"
+                                                name="./optionalContactInfo" />
+                                            <optionalContactPhone
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Optional Contact Phone"
+                                                fieldDescription="The Phone number has to follow this format: 1-XXX-XXX-XXXX"
+                                                name="./optionalContactPhone">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-phone-number-validation="false">
+                                                </granite:data>
+                                            </optionalContactPhone>
+                                            <optionalContactIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Optional Contact Icon"
+                                                fieldDescription="The size of the icon must be 24x24"
+                                                fileNameParameter="./fileNameOptionalContactIcon"
+                                                fileReferenceParameter="./optionalContactIcon"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileOptionalContactIcon"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <copyright
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Copyright"
+                                                fieldDescription="Limit of 50 characters."
+                                                maxlength="50"
+                                                required="{Boolean}true"
+                                                name="./copyright"/>
+                                            <hoursOfOperation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Hours of Operation"
+                                                fieldDescription="Limit of 100 characters."
+                                                maxlength="100"
+                                                required="{Boolean}true"
+                                                name="./hoursOfOperation"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </extra>
+                    <legal-and-privacy
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Legal and Privacy Navigation"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <legal-and-privacy
+                                                jcr:primaryType="nt:unstructured"
+                                                validation="multifield-max-5"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                required="{Boolean}true"
+                                                fieldLabel="Items">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./multifieldPrivacy">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <name
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Text"
+                                                                    fieldDescription="Limit of 20 characters."
+                                                                    maxlength="20"
+                                                                    required="{Boolean}true"
+                                                                    name="./text"/>
+                                                                <link
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="URL"
+                                                                    required="{Boolean}true"
+                                                                    rootPath="/content/akron"
+                                                                    name="./url"/>
+                                                                <target
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Target"
+                                                                    name="./target">
+                                                                    <datasource
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="akron/datasources/dropdown"
+                                                                        path="/apps/akron/dialogs/options/target-options"
+                                                                        defaultValueSelected="internal"/>
+                                                                </target>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </legal-and-privacy>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </legal-and-privacy>
+                    <social-media
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Social Media"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <social-links
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                required="{Boolean}true"
+                                                validation="multifield-max-6"
+                                                fieldLabel="Items">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./multifieldSocial">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <icon
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="Icon"
+                                                                    required="{Boolean}true"
+                                                                    rootPath="/content/dam"
+                                                                    name="./icon"/>
+                                                                <alt
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Alternative Text"
+                                                                    fieldDescription="Limit of 20 characters."
+                                                                    maxlength="20"
+                                                                    required="{Boolean}true"
+                                                                    name="./altText"/>
+                                                                <link
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="URL"
+                                                                    required="{Boolean}true"
+                                                                    rootPath="/content/akron"
+                                                                    name="./url"/>
+                                                                <target
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Target"
+                                                                    name="./target">
+                                                                    <datasource
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="akron/datasources/dropdown"
+                                                                        path="/apps/akron/dialogs/options/target-options"
+                                                                        defaultValueSelected="external"/>
+                                                                </target>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </social-links>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </social-media>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

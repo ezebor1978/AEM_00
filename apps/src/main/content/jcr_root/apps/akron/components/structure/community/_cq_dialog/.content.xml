@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Community Page"
+    mode="edit">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <enrollment
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Community"
+                        sling:orderAfter="advanced"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fieldset
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Enrollment Details"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <county
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="County"
+                                                        fieldDescription="Limit of 35 characters."
+                                                        maxlength="35"
+                                                        required="{Boolean}true"
+                                                        name="./county"/>
+                                                    <edcCode
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Utility Company Code"
+                                                        fieldDescription="Same code as the EDC details. Limit of 35 characters."
+                                                        maxlength="35"
+                                                        required="{Boolean}true"
+                                                        name="./edcCode"/>
+                                                    <subtitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Subtitle"
+                                                        fieldDescription="Default value: Electric Aggregation Program. Limit of 40 characters."
+                                                        maxlength="40"
+                                                        required="{Boolean}true"
+                                                        value="Electric Aggregation Program"
+                                                        name="./communitySubtitle"/>
+                                                    <phone-number-label
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Phone label"
+                                                        fieldDescription="Limit of 20 characters."
+                                                        maxlength="20"
+                                                        required="{Boolean}true"
+                                                        name="./phoneNumberLabel"/>
+                                                    <phone-number
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Phone number"
+                                                        fieldDescription="The Phone number has to follow this format: 1-XXX-XXX-XXXX. If a phone number is not added, it will inherit the phone number from the Community List programs."
+                                                        name="./phoneNumber">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-phone-number-validation="false">
+                                                        </granite:data>
+                                                    </phone-number>
+                                                    <phone-icon
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Phone icon"
+                                                        name="./phoneIcon"
+                                                        rootPath="/content/dam"
+                                                        required="{Boolean}true"/>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </fieldset>
+                                </items>
+                            </column>
+                        </items>
+                    </enrollment>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

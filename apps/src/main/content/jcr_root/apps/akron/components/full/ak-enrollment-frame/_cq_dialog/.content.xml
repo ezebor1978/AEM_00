@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Enrollment Frame"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <form-type
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Form Type"
+                                                required="{Boolean}true"
+                                                name="./formType">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide=""
+                                                    cq-dialog-showhide-target=".type-showhide">
+                                                </granite:data>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <residential
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Residential"
+                                                        value="residential"/>
+                                                    <business
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Business"
+                                                        value="business"/>
+                                                    <bundle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Bundle"
+                                                        value="bundle"/>
+                                                </items>
+                                            </form-type>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <step-one
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Step 1"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 1 section title"
+                                                required="{Boolean}true"
+                                                fieldDescription="Limit of 40 characters."
+                                                maxlength="40"
+                                                name="./stepOneTitle"/>
+                                            <first-name-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="First name label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: First Name. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="First Name"
+                                                name="./firstNameLabel"/>
+                                            <first-name-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="First name placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter first name. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter first name"
+                                                name="./firstNamePlaceholder"/>
+                                            <last-name-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Last name label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Last Name. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="Last Name"
+                                                name="./lastNameLabel"/>
+                                            <last-name-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Last name placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter last name. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter last name"
+                                                name="./lastNamePlaceholder"/>
+                                            <phone-number-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Phone number label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Phone Number. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="Phone Number"
+                                                name="./phoneNumberLabel"/>
+                                            <phone-number-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Phone number placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter phone number. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter phone number"
+                                                name="./phoneNumberPlaceholder"/>
+                                            <email-address-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Email address label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Email Address. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="Email Address"
+                                                name="./emailAddressLabel"/>
+                                            <email-address-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Email address placeholder	"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter email address. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter email address"
+                                                name="./emailAddressPlaceholder"/>
+                                            <business-fields
+                                                jcr:primaryType="nt:unstructured"
+                                                granite:class="type-showhide hide"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="business">
+                                                </granite:data>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <company-label
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Company label"
+                                                        fieldDescription="Default value: Company name. Limit of 55 characters."
+                                                        maxlength="55"
+                                                        value="Company name"
+                                                        name="./companyBusinessLabel">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-input-required-not-hidden="">
+                                                        </granite:data>
+                                                    </company-label>
+                                                    <company-label-placeholder
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Company name placeholder"
+                                                        fieldDescription="Default value: Enter your company name. Limit of 35 characters."
+                                                        maxlength="35"
+                                                        value="Enter your company name"
+                                                        name="./companyBusinessPlaceholder">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-input-required-not-hidden="">
+                                                        </granite:data>
+                                                    </company-label-placeholder>
+                                                </items>
+                                            </business-fields>
+                                            <back-button-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Back button label	"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Back. Limit of 20 characters."
+                                                maxlength="20"
+                                                value="Back"
+                                                name="./backButtonLabelOne"/>
+                                            <CTA-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./CTALabelOne"/>
+                                            <step-one-instruction-image
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Step 1 instructions icon"
+                                                fileNameParameter="./fileNameStepOneInstrImage"
+                                                fileReferenceParameter="./fileReferenceStepOneInstrImage"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileStepOneInstrImage"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <step-one-instruction-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 1 instructions title	"
+                                                fieldDescription="Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./stepOneInstrTitle"/>
+                                            <step-one-instruction-description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 1 instructions description"
+                                                fieldDescription="Limit of 150 characters."
+                                                maxlength="150"
+                                                name="./stepOneInstrDescription"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </step-one>
+                    <step-two
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Step 2"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 2 section title"
+                                                required="{Boolean}true"
+                                                fieldDescription="Limit of 40 characters."
+                                                maxlength="40"
+                                                name="./stepTwoTitle"/>
+                                            <street-address-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Street address label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Street Address. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="Street Address"
+                                                name="./streetAddressLabel"/>
+                                            <street-address-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Street address placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter your address. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter your address"
+                                                name="./streetAddressPlaceholder"/>
+                                            <city-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="City label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: City. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="City"
+                                                name="./cityLabel"/>
+                                            <city-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="City placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter your city. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter your city"
+                                                name="./cityPlaceholder"/>
+                                            <state-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="State label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: State. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="State"
+                                                name="./stateLabel"/>
+                                            <state-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="State placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Select your state. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Select your state"
+                                                name="./statePlaceholder"/>
+                                            <zip-code-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Zip code label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Zip code. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="Zip code"
+                                                name="./zipCodeLabel"/>
+                                            <zip-code-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Zip code placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter your zip code. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter your zip code"
+                                                name="./zipCodePlaceholder"/>
+                                            <back-button-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Back button label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Back. Limit of 20 characters."
+                                                maxlength="20"
+                                                value="Back"
+                                                name="./backButtonLabelTwo"/>
+                                            <CTA-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./CTALabelTwo"/>
+                                            <step-two-instruction-image
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Step 2 instructions icon"
+                                                fileNameParameter="./fileNameStepTwoInstrImage"
+                                                fileReferenceParameter="./fileReferenceStepTwoInstrImage"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileStepTwoInstrImage"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <step-two-instruction-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 2 instructions title	"
+                                                fieldDescription="Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./stepTwoInstrTitle"/>
+                                            <step-two-instruction-description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 2 instructions description"
+                                                fieldDescription="Limit of 150 characters."
+                                                maxlength="150"
+                                                name="./stepTwoInstrDescription"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </step-two>
+                    <step-three
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Step 3"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 3 section title"
+                                                required="{Boolean}true"
+                                                fieldDescription="Limit of 40 characters."
+                                                maxlength="40"
+                                                name="./stepThreeTitle"/>
+                                            <utility-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Current utility company label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Current Utility Company. Limit of 30 characters."
+                                                maxlength="30"
+                                                value="Current Utility Company"
+                                                name="./companyLabel"/>
+                                            <utility-modal-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Current utility modal label"
+                                                fieldDescription="Default value: Wrong utility?. Limit of 30 characters."
+                                                maxlength="30"
+                                                value="Wrong utility?"
+                                                name="./utilityModalLabel"/>
+                                            <customer-name-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Customer number placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter your customer number. Limit of 35 characters."
+                                                maxlength="35"
+                                                value="Enter your customer number"
+                                                name="./customerNumberPlaceholder"/>
+                                            <customer-name-modal
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Customer name modal label"
+                                                fieldDescription="Default value: Help me find this. Limit of 30 characters."
+                                                maxlength="30"
+                                                value="Help me find this"
+                                                name="./customerNameModalLabel"/>
+                                            <residential-fields
+                                                jcr:primaryType="nt:unstructured"
+                                                granite:class="type-showhide hide"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="residential">
+                                                </granite:data>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <residential-purpose-label
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Residential purpose label"
+                                                        fieldDescription="Default value: Is this used solely for your residential purposes?. Limit of 55 characters."
+                                                        maxlength="55"
+                                                        value="Is this used solely for your residential purposes?"
+                                                        name="./residentialPurposeLabel">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-input-required-not-hidden="">
+                                                        </granite:data>
+                                                    </residential-purpose-label>
+                                                    <residential-purpose-placeholder
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Residential purpose placeholder"
+                                                        fieldDescription="Default value: Choose an option. Limit of 35 characters."
+                                                        maxlength="35"
+                                                        value="Choose an option"
+                                                        name="./residentialPurposePlaceholder">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-input-required-not-hidden="">
+                                                        </granite:data>
+                                                    </residential-purpose-placeholder>
+                                                    <residential-purpose-modal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Residential purpose modal label"
+                                                        fieldDescription="Default value: What is this?. Limit of 30 characters."
+                                                        maxlength="30"
+                                                        value="What is this?"
+                                                        name="./residentialPurposeModalLabel">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cq-dialog-input-required-not-hidden="">
+                                                        </granite:data>
+                                                    </residential-purpose-modal>
+                                                </items>
+                                            </residential-fields>
+                                            <hear-about-us-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Hear about us label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: How did you hear about us?. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="How did you hear about us?"
+                                                name="./hearAboutUsLabel"/>
+                                            <hear-about-us-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Hear about us placeholder	"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Choose an option. Limit of 50 characters."
+                                                maxlength="50"
+                                                value="Choose an option"
+                                                name="./hearAboutUsPlaceholder"/>
+                                            <address-box
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Different service address checkbox"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: My electric service address is different than my mailing address. Limit of 70 characters."
+                                                maxlength="70"
+                                                value="My electric service address is different than my mailing address"
+                                                name="./differentServiceAddressCheckbox"/>
+                                            <street-address-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Electric service address label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Electric Service Address. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="Electric Service Address"
+                                                name="./electricServiceLabel"/>
+                                            <street-address-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Street address placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter your address. Limit of 50 characters."
+                                                maxlength="50"
+                                                value="Enter your address"
+                                                name="./electricServicePlaceholder"/>
+                                            <city-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="City label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: City. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="City"
+                                                name="./cityLabelDiff"/>
+                                            <city-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="City placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter your city. Limit of 50 characters."
+                                                maxlength="50"
+                                                value="Enter your city"
+                                                name="./cityPlaceholderDiff"/>
+                                            <state-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="State label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: State. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="State"
+                                                name="./stateLabelDiff"/>
+                                            <state-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="State placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Select your state. Limit of 50 characters."
+                                                maxlength="50"
+                                                value="Select your state"
+                                                name="./statePlaceholderDiff"/>
+                                            <zip-code-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Zip code label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Zip code. Limit of 55 characters."
+                                                maxlength="55"
+                                                value="Zip code"
+                                                name="./zipCodeLabelDiff"/>
+                                            <zip-code-placeholder
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Zip code placeholder"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Enter your zip code. Limit of 50 characters."
+                                                maxlength="50"
+                                                value="Enter your zip code"
+                                                name="./zipCodePlaceholderDiff"/>
+                                            <back-button-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Back button label	"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Back. Limit of 20 characters."
+                                                maxlength="20"
+                                                value="Back"
+                                                name="./backButtonLabelThree"/>
+                                            <CTA-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./CTALabelThree"/>
+                                            <step-three-instruction-image
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Step 3 instructions icon"
+                                                fileNameParameter="./fileNameStepThreeInstrImage"
+                                                fileReferenceParameter="./fileReferenceStepThreeInstrImage"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileStepThreeInstrImage"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <step-three-instruction-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 3 instructions title	"
+                                                fieldDescription="Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./stepThreeInstrTitle"/>
+                                            <step-three-instruction-description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 3 instructions description"
+                                                fieldDescription="Limit of 150 characters."
+                                                maxlength="150"
+                                                name="./stepThreeInstrDescription"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </step-three>
+                    <step-four
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Step 4"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 4 section title"
+                                                required="{Boolean}true"
+                                                fieldDescription="Limit of 40 characters."
+                                                maxlength="40"
+                                                name="./stepFourTitle"/>
+                                            <step-one-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step #1 title"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Contact Information. Limit of 30 characters."
+                                                maxlength="30"
+                                                value="Contact Information"
+                                                name="./stepOneTitleInFourth"/>
+                                            <step-two-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step #2 title"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Address. Limit of 30 characters."
+                                                maxlength="30"
+                                                value="Address"
+                                                name="./stepTwoTitleInFourth"/>
+                                            <step-three-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step #3 title"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Account Information. Limit of 30 characters."
+                                                maxlength="30"
+                                                value="Account Information"
+                                                name="./stepThreeTitleInFourth"/>
+                                            <address-box
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Special offers checkbox"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Please send me special offers and updates from Energy Harbor. Limit of 70 characters."
+                                                maxlength="70"
+                                                value="Please send me special offers and updates from Energy Harbor"
+                                                name="./specialOffersCheckboxText"/>
+                                            <disclaimer
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                useFixedInlineToolbar="{Boolean}true"
+                                                fieldLabel="Disclaimer"
+                                                fieldDescription="Use ${e} where you want to insert 'Terms and Conditions' text with the link to the Electricity Offer PDF, Use ${g} where you want to insert 'Terms and Conditions' text with the link to the Gas Offer PDF"
+                                                required="{Boolean}true"
+                                                name="./disclaimer"/>
+                                            <text-alert-checkbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Text alerts checkbox"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Please send me text alerts from Energy Harbor. Limit of 485 characters."
+                                                maxlength="485"
+                                                value="I hereby consent to receive autodialed and or pre-recorded/artificial telemarketing calls and/or text messages from or on behalf of Energy Harbor at the telephone number listed above. I agree to receive account and marketing related communications from Energy Harbor. I understand that message and data rates may apply and that this consent is not a condition of purchasing any goods or services from Energy Harbor. This consent may be revoked at any time by calling Energy Harbor."
+                                                name="./textAlertCheckbox"/>
+                                            <back-button-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Back button label	"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Back. Limit of 20 characters."
+                                                maxlength="20"
+                                                value="Back"
+                                                name="./backButtonLabelFour"/>
+                                            <CTA-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA label"
+                                                required="{Boolean}true"
+                                                fieldDescription="Default value: Back. Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./CTALabelFour"/>
+                                            <step-four-instruction-image
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Step 4 instructions icon"
+                                                fileNameParameter="./fileNameStepFourInstrImage"
+                                                fileReferenceParameter="./fileReferenceStepFourInstrImage"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileStepFourInstrImage"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <step-four-instruction-title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 4 instructions title"
+                                                fieldDescription="Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./stepFourInstrTitle"/>
+                                            <step-four-instruction-description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Step 4 instructions description"
+                                                fieldDescription="Limit of 150 characters."
+                                                maxlength="150"
+                                                name="./stepFourInstrDescription"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </step-four>
+                    <success-screen
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Success Screen"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cta-link
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                fieldLabel="CTA Link"
+                                                name="./ctaLink"
+                                                rootPath="/content/akron"
+                                                required="{Boolean}true"/>
+                                            <cta-link-target
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                name="./ctaLinkTarget"
+                                                fieldLabel="CTA target"
+                                                required="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/target-options"
+                                                    defaultValueSelected="internal"/>
+                                            </cta-link-target>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </success-screen>
+                    <error
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Error message"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <icon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Icon"
+                                                fileNameParameter="./fileName"
+                                                fileReferenceParameter="./fileReference"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./file"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"
+                                                required="{Boolean}true"/>
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                fieldDescription="Default value: Offer Page Not Found. Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./title"
+                                                value="Offer Page Not Found"
+                                                required="{Boolean}true"/>
+                                            <headingLevel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Title heading type"
+                                                name="./headingLevel"
+                                                required="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/headings"
+                                                    defaultValueSelected="h1"
+                                                    valueToIgnore="none"/>
+                                            </headingLevel>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldLabel="Description"
+                                                fieldDescription="Default value: Sorry, the offer you are searching for has either been closed or has expired. Limit of 150 characters."
+                                                maxlength="150"
+                                                name="./description"
+                                                value="Sorry, the offer you are searching for has either been closed or has expired."
+                                                required="{Boolean}true"/>
+                                            <cta-text
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA Text"
+                                                fieldDescription="Default value: Return to Home Page. Limit of 20 characters."
+                                                maxlength="20"
+                                                name="./ctaText"
+                                                value="Return to Home Page"
+                                                required="{Boolean}true"/>
+                                            <cta-link
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                fieldLabel="CTA Link"
+                                                name="./ctaLinkError"
+                                                rootPath="/content/akron"
+                                                required="{Boolean}true"/>
+                                            <cta-link-target
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                name="./ctaLinkTargetError"
+                                                fieldLabel="CTA Target"
+                                                required="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/target-options"
+                                                    defaultValueSelected="internal"/>
+                                            </cta-link-target>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </error>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

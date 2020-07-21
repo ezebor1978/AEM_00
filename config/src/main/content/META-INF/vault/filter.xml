@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <!-- Config files -->
+    <filter root="/apps/akron/config"/>
+    <filter root="/apps/akron/config.prod.publish"/>
+    <filter root="/apps/akron/config.stage.publish"/>
+</workspaceFilter>

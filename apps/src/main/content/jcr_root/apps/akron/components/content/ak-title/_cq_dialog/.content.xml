@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Title"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <text
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                required="{Boolean}true"
+                                                maxlength="30"
+                                                fieldDescription="Limit of 30 characters"
+                                                name="./text"/>
+                                            <headingLevel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Title heading type"
+                                                name="./headingLevel"
+                                                required="{Boolean}false">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/headings"
+                                                    defaultValueSelected="h1"
+                                                    valueToIgnore="none"/>
+                                            </headingLevel>
+                                            <overrideLevel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Override the style of the heading"
+                                                fieldDescription="After selecting an override level, it will make the heading to look like that heading but it'll keep the same tag"
+                                                name="./overrideLevel"
+                                                required="{Boolean}false">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/headings"
+                                                    defaultValueSelected="none"/>
+                                            </overrideLevel>
+                                            <alignment
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Alignment"
+                                                fieldDescription="Select the alignment of the Title."
+                                                name="./alignment"
+                                                required="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/alignment"
+                                                    valueToIgnore="right"
+                                                    defaultValueSelected="left"/>
+                                            </alignment>
+                                            <color
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Text Color"
+                                                name="./color"
+                                                required="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/colors"
+                                                    valueToIgnore="#721edc"
+                                                    defaultValueSelected="#000000"/>
+                                            </color>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

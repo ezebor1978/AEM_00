@@ -1,0 +1,23 @@
+<sly>
+    <a href="#mainContent" class="ak-skip-link" data-swiftype-index="false">Skip to main content</a>
+
+    <sly data-sly-unwrap data-sly-test="${properties.is_home}">
+        <div data-sly-resource="${'ak-header' @ resourceType='akron/components/full/ak-header'}"></div>
+    </sly>
+
+    <sly data-sly-unwrap data-sly-test="${!properties.is_home}">
+        <div data-sly-resource="${'ak-header' @ resourceType='akron/components/full/ak-header', wcmmode='disabled'}"></div>
+    </sly>
+
+    <main id="mainContent" role="main">
+        <div data-sly-resource="${'ak-par' @ resourceType='wcm/foundation/components/parsys'}"></div>
+    </main>
+
+    <sly data-sly-unwrap data-sly-test="${properties.is_home}">
+        <div data-sly-resource="${'ak-footer' @ resourceType='akron/components/full/ak-footer'}"></div>
+    </sly>
+
+    <sly data-sly-unwrap data-sly-test="${!properties.is_home}">
+        <div data-sly-resource="${'ak-footer' @ resourceType='akron/components/full/ak-footer', wcmmode='disabled'}"></div>
+    </sly>
+</sly>

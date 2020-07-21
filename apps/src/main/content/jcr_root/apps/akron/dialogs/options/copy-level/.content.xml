@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <level1
+        jcr:primaryType="nt:unstructured"
+        text="Level 1"
+        value="1"/>
+    <level2
+        jcr:primaryType="nt:unstructured"
+        text="Level 2"
+        value="2"/>
+    <level3
+        jcr:primaryType="nt:unstructured"
+        text="Level 3"
+        value="3"/>
+    <level4
+        jcr:primaryType="nt:unstructured"
+        text="Level 4"
+        value="4"/>
+</jcr:root>

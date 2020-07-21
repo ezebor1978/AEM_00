@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Testimonial"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <mutifield-items
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Click 'Add field' to add a new item to the carousel"
+                                                fieldLabel="Add a testimonial"
+                                                granite:class="multifield-items-base"
+                                                validation="multifield-max-5">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./multifieldItems">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <content
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                    useFixedInlineToolbar="{Boolean}true"
+                                                                    fieldLabel="Testimonial"
+                                                                    required="{Boolean}true"
+                                                                    name="./testimonial">
+                                                                    <rtePlugins
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceSuperType="akron/dialogs/rte/standard/rtePlugins"/>
+                                                                    <uiSettings
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceSuperType="akron/dialogs/rte/standard/uiSettings"/>
+                                                                    <granite:data
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        cq-dialog-rte-limit="230">
+                                                                    </granite:data>
+                                                                </content>
+                                                                <image
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="Image selection"
+                                                                    fieldDescription="IUpload a square image. Round mask will be applied automatically"
+                                                                    rootPath="/content/dam"
+                                                                    required="{Boolean}true"
+                                                                    name="./image"/>
+                                                                <alternative-text
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldLabel="Alternative Text"
+                                                                    required="{Boolean}true"
+                                                                    maxlength="200"
+                                                                    fieldDescription="Limit of 200 characters"
+                                                                    name="./alternativeText"/>
+                                                                <name
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldLabel="Name"
+                                                                    required="{Boolean}true"
+                                                                    maxlength="15"
+                                                                    fieldDescription="Limit of 15 characters"
+                                                                    name="./name"/>
+                                                                <description
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldLabel="Description"
+                                                                    required="{Boolean}true"
+                                                                    maxlength="30"
+                                                                    fieldDescription="Limit of 30 characters"
+                                                                    name="./description"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </mutifield-items>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

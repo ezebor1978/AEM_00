@@ -1,0 +1,12 @@
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.text="${properties.text}"
+    data-sly-use.component="ak-button.js"
+>
+    <div class="base-button__align base-button__align--${properties.buttonAlign}">
+        <a  href="${component.ctaLink}"
+            class="base-button base-button--${properties.buttonType}"
+            target="${properties.ctaLinkTarget == 'external' ? '_blank' : '_self'}">${properties.text}</a>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text}"></sly>

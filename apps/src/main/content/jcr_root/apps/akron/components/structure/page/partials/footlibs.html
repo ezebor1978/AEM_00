@@ -1,0 +1,18 @@
+<script id="i18n-dictionary" type="application/json" data-sly-use.dict="${'com.energyharbor.akron.core.sightly.I18nDictionary' @ locale=currentPage.language}">
+    ${dict.json @ context='unsafe'}
+</script>
+
+<sly data-sly-use.runmode="runmode.js">
+    <sly data-sly-unwrap
+         data-sly-test="${!runmode.useWebpack}"
+         data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientLib.js @ categories='akron.all'}"/>
+
+    <script type="text/javascript"
+            data-sly-test="${runmode.useWebpack}"
+            src="http://127.0.0.1:3000/static/js/bundle.js"></script>
+</sly>
+
+<div data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"></div>
+
+${inheritedPageProperties.gtmBody @ context = 'html'}

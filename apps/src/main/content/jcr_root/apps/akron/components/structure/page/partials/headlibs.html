@@ -1,0 +1,15 @@
+<!-- if prod -->
+<sly data-sly-use.runmode="runmode.js">
+    <sly data-sly-test="${!runmode.useWebpack}"
+         data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientLib.css @ categories='akron.all'}"/>
+</sly>
+
+<!--/* Include Adobe Dynamic Tag Management libraries for the header */-->
+<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap/>
+
+<!--/* Include ContextHub */-->
+<!--<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>-->
+
+<!--/* Initializes the Experience Manager authoring UI */-->
+<sly data-sly-include="/libs/wcm/core/components/init/init.jsp" data-sly-unwrap/>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Plans"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+<content
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <tabs
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/tabs"
+            maximized="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+                <details
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Details"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <columns
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <subtitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Subtitle"
+                                            maxlength="35"
+                                            fieldDescription="Limit of 35 characters"
+                                            required="{Boolean}true"
+                                            name="./subtitle"/>
+                                        <phone-title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Phone Title"
+                                            maxlength="20"
+                                            fieldDescription="Limit of 20 characters"
+                                            required="{Boolean}true"
+                                            name="./phoneTitle"/>
+                                        <phone-icon
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            fieldLabel="Phone Icon"
+                                            name="./file"
+                                            fileNameParameter="./fileName"
+                                            fileReferenceParameter="./phoneIcon"
+                                            mimeTypes="image"
+                                            multiple="false"
+                                            required="{Boolean}true"
+                                            uploadUrl="${suffix.path}"
+                                            allowUpload="{Boolean}false"
+                                            useHTML5="true" />
+										<bundles-tab
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Bundles tab name"
+                                            maxlength="25"
+                                            fieldDescription="Limit of 25 characters"
+                                            required="{Boolean}true"
+                                            name="./bundlesTab"/>
+										<gas-tab
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Gas tab name"
+                                            maxlength="25"
+                                            fieldDescription="Limit of 25 characters"
+                                            required="{Boolean}true"
+                                            name="./gasTab"/>
+										<electric-tab
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Electric tab name"
+                                            maxlength="25"
+                                            fieldDescription="Limit of 25 characters"
+                                            required="{Boolean}true"
+                                            name="./electricTab"/>
+                                        <available-offers
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Available Offers"
+                                            maxlength="20"
+                                            fieldDescription="Limit of 20 characters"
+                                            required="{Boolean}true"
+                                            name="./availableOffers"/>
+                                        <show-more
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Show more offers label"
+                                            maxlength="20"
+                                            fieldDescription="Limit of 20 characters"
+                                            required="{Boolean}true"
+                                            name="./showMore"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                </details>
+                <promo-code
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Promo Code Modal"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <columns
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <promo-code-label
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="CTA to Open Modal"
+                                            maxlength="20"
+                                            fieldDescription="Limit of 20 characters"
+                                            required="{Boolean}true"
+                                            name="./promoCodeLabel"/>
+                                        <promo-code-modal-title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Title"
+                                            maxlength="20"
+                                            fieldDescription="Limit of 20 characters"
+                                            required="{Boolean}true"
+                                            name="./promoCodeModalTitle"/>
+                                        <promo-code-modal-label
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Label"
+                                            maxlength="25"
+                                            fieldDescription="Limit of 25 characters"
+                                            required="{Boolean}true"
+                                            name="./promoCodeModalLabel"/>
+                                        <promo-code-modal-placeholder
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Placeholder"
+                                            maxlength="25"
+                                            fieldDescription="Limit of 25 characters"
+                                            required="{Boolean}true"
+                                            name="./promoCodeModalPlaceholder"/>
+                                        <promo-code-modal-cta
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="CTA Text"
+                                            maxlength="20"
+                                            fieldDescription="Limit of 20 characters"
+                                            required="{Boolean}true"
+                                            name="./promoCodeModalCTA"/>
+                                        <promo-code-modal-error-msg
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Error message"
+                                            maxlength="50"
+                                            fieldDescription="Limit of 50 characters"
+                                            required="{Boolean}true"
+                                            name="./promoCodeModalErrorMsg"/>
+                                        <promo-code-modal-success-msg
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            cq:showOnCreate="{Boolean}true"
+                                            fieldLabel="Success message"
+                                            maxlength="50"
+                                            fieldDescription="Limit of 50 characters"
+                                            required="{Boolean}true"
+                                            name="./promoCodeModalSuccessMsg"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                </promo-code>
+                <error
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Error message"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <columns
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <icon
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            fieldLabel="Icon"
+                                            fileNameParameter="./fileName"
+                                            fileReferenceParameter="./errorIcon"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./fileReference"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"
+                                            required="{Boolean}true"/>
+                                        <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Title"
+                                            fieldDescription="Limit of 20 characters."
+                                            maxlength="20"
+                                            name="./errorTitle"
+                                            required="{Boolean}true"/>
+                                        <headingLevel
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Title heading type"
+                                            name="./headingLevel"
+                                            required="{Boolean}true">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="akron/datasources/dropdown"
+                                                path="/apps/akron/dialogs/options/headings"
+                                                defaultValueSelected="h1"
+                                                valueToIgnore="none"/>
+                                        </headingLevel>
+                                        <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                            fieldLabel="Description"
+                                            fieldDescription="Limit of 150 characters."
+                                            maxlength="150"
+                                            name="./description"
+                                            required="{Boolean}true"/>
+                                        <cta-text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="CTA Text"
+                                            fieldDescription="Default value: Return to Home Page. Limit of 20 characters."
+                                            maxlength="20"
+                                            name="./ctaText"
+                                            required="{Boolean}true"/>
+                                        <cta-link
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                            fieldLabel="CTA Link"
+                                            name="./ctaLinkError"
+                                            rootPath="/content/akron"
+                                            required="{Boolean}true"/>
+                                        <cta-link-target
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            name="./ctaLinkTargetError"
+                                            fieldLabel="CTA Target"
+                                            required="{Boolean}true">
+                                            <datasource
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="akron/datasources/dropdown"
+                                                path="/apps/akron/dialogs/options/target-options"
+                                                defaultValueSelected="internal"/>
+                                        </cta-link-target>
+                                    </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                </error>
+            </items>
+        </tabs>
+    </items>
+</content>
+</jcr:root>
+

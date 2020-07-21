@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Article Page"
+    mode="edit">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <article
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Article"
+                        sling:orderAfter="advanced"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fieldset
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Article Details"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+<!--                                                    <author-headshot-->
+<!--                                                        jcr:primaryType="nt:unstructured"-->
+<!--                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"-->
+<!--                                                        cq:showOnCreate="{Boolean}true"-->
+<!--                                                        fieldLabel="Author's photo"-->
+<!--                                                        name="./authorImage"-->
+<!--                                                        rootPath="/content/dam"-->
+<!--                                                        required="{Boolean}true"/>-->
+<!--                                                    <author-headshot-altText-->
+<!--                                                        jcr:primaryType="nt:unstructured"-->
+<!--                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"-->
+<!--                                                        cq:showOnCreate="{Boolean}true"-->
+<!--                                                        fieldLabel="Author's photo alternative text"-->
+<!--                                                        maxlength="200"-->
+<!--                                                        fieldDescription="Provide a textual alternative of the content and function of the image."-->
+<!--                                                        required="{Boolean}true"-->
+<!--                                                        name="./authorImageAltText"/>-->
+<!--                                                    <author-name-->
+<!--                                                        jcr:primaryType="nt:unstructured"-->
+<!--                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"-->
+<!--                                                        cq:showOnCreate="{Boolean}true"-->
+<!--                                                        fieldLabel="Author"-->
+<!--                                                        maxlength="35"-->
+<!--                                                        fieldDescription="Limit of 35 characters"-->
+<!--                                                        required="{Boolean}true"-->
+<!--                                                        name="./authorName"/>-->
+                                                    <published-date
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        name="./publishedDate"
+                                                        fieldLabel="Published Date"
+                                                        required="{Boolean}true"
+                                                        type="date"
+                                                        displayedFormat="MMMM DD, YYYY"/>
+                                                    <image
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Article Image"
+                                                        name="./articleImage"
+                                                        rootPath="/content/dam"
+                                                        required="{Boolean}true"/>
+                                                    <imageAltText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        cq:showOnCreate="{Boolean}true"
+                                                        fieldLabel="Article Image Alternative Text"
+                                                        fieldDescription="Provide a textual alternative of the content and function of the image."
+                                                        required="{Boolean}true"
+                                                        name="./articleImageAltText"/>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </fieldset>
+                                </items>
+                            </column>
+                        </items>
+                    </article>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

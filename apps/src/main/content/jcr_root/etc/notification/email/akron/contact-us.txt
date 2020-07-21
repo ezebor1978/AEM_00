@@ -1,0 +1,12 @@
+Subject: Contact US - ${questionConcerning}
+
+Contact form submitted:
+
+First Name: ${firstName}
+Last Name: ${lastName}
+Email: ${email}
+Phone Number: ${phoneNumber}
+Company: ${company}
+My Question is Concerning: ${questionConcerning}
+CustomerType: ${customerType}
+Message: ${message}

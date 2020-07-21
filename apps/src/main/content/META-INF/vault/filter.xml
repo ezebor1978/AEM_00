@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/akron">
+        <exclude pattern="/apps/akron/install" />
+    </filter>
+
+    <filter root="/etc/notification/email/akron" mode="update"/>
+    <filter root="/apps/sling"/>
+    <filter root="/apps/settings/wcm/designs/akron"/>
+</workspaceFilter>

@@ -1,0 +1,11 @@
+<sly data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test="${image.src}"
+    data-sly-unwrap>
+    <ak-image
+        data-sly-use.parser="com.energyharbor.akron.core.services.DialogDataParser"
+        aem-data="${parser.data}"
+        src="${image.src}">
+    </ak-image>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !image.src}"></sly>

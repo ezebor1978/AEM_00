@@ -1,0 +1,6 @@
+<ak-enroll-by-phone
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.parser="com.energyharbor.akron.core.services.DialogDataParser"
+    aem-data="${parser.data}">
+</ak-enroll-by-phone>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title}"></sly>

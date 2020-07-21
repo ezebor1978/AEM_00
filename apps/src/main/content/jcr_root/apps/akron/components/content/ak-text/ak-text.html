@@ -1,0 +1,13 @@
+<div
+    data-sly-use.textModel="com.adobe.cq.wcm.core.components.models.Text"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.text="${textModel.text}"
+    class="base-text base-text--level-${properties.level ? properties.level : '1'}"
+    style="color: ${properties.color @ context='styleToken'};"
+>
+    <div data-sly-unwrap="${textModel.isRichText}">
+        ${text @ context =textModel.isRichText ? 'html' : 'text'}
+    </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !text, classAppend=''}"></sly>
+

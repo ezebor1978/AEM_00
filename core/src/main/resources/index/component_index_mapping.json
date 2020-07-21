@@ -1,0 +1,187 @@
+{
+	"akron/components/content/ak-article-cards-list" : [
+		"title",
+		"authorImageAltText",
+		"articleImageAltText",
+        "authorName"
+	],
+
+    "akron/components/content/ak-biography-card" : [
+        "ctaText",
+        "content"
+    ],
+
+    "akron/components/content/ak-contact-us" : [
+        "ctaLabel",
+        "firstNameLabel",
+        "lastNameLabel",
+        "companyLabel",
+        "phoneNumberLabel",
+        "emailAddressLabel",
+        "questionLabel",
+        "customerTypeBusiness",
+        "customerTypeResidential",
+        "questionsOrCommentsLabel",
+        "customerTypeLabel"
+    ],
+
+    "akron/components/content/ak-find-your-plan" : [
+        "title",
+        "ctaText",
+        "description"
+    ],
+
+    "akron/components/content/ak-icon-card" : [
+        "title",
+        "ctaText",
+        "iconAltText",
+        "description"
+    ],
+
+    "akron/components/content/image" : [
+        "altText"
+    ],
+
+    "akron/components/content/ak-image-card" : [
+        "mainImageAltText",
+        "title",
+        "description",
+        "thumbnailText",
+        "thumbnailAltText",
+        "ctaText"
+    ],
+
+    "akron/components/content/ak-media-with-text" : [
+        "imageAltText",
+        "title",
+        "subtitle",
+        "description",
+        "ctaText"
+    ],
+
+    "akron/components/content/ak-message" : [
+        "title",
+        "description",
+        "ctaText"
+    ],
+
+    "akron/components/content/ak-request-a-quote" : [
+        "explanatoryIconAltText",
+        "disclaimer",
+        "explanatoryTitle",
+        "explanatoryDescription",
+        "firstNameLabel",
+        "lastNameLabel",
+        "emailAddressLabel",
+        "phoneNumberLabel",
+        "jobTitleLabel",
+        "companyLabel",
+        "mailingAddressLabel",
+        "cityLabel",
+        "stateLabel",
+        "zipCodeLabel",
+        "preferredContactLabel",
+        "utilityLabel",
+        "approximateMonthlyBillLabel",
+        "facilityTypeLabel",
+        "businessTypeLabel",
+        "decisionTimeframeLabel",
+        "uploadRecentBillLabel",
+        "howDidYouHearLabel",
+        "commentsLabel"
+    ],
+
+    "akron/components/content/ak-subtitle" : [
+        "text"
+    ],
+
+    "akron/components/content/ak-testimonial" : [
+        "multifieldItems"
+    ],
+
+    "akron/components/content/ak-video" : [
+        "title",
+        "subtitle",
+        "imageAltText"
+    ],
+
+    "akron/components/content/ak-text" : [
+        "text"
+    ],
+
+    "akron/components/content/ak-title" : [
+        "text"
+    ],
+
+    "akron/components/full/ak-article-frame" : [
+        "title",
+        "authorName",
+        "authorImageAltText",
+        "articleImageAltText"
+    ],
+
+    "akron/components/full/ak-back-button" : [
+        "text"
+    ],
+
+    "akron/components/full/ak-biography-frame" : [
+        "title",
+        "job",
+        "bioImageAltText"
+    ],
+
+    "akron/components/full/ak-community-programs-frame" : [
+        "title",
+        "subtitle",
+        "phoneTitle",
+        "column1Title",
+        "column2Title",
+        "column3Title"
+    ],
+
+    "akron/components/full/ak-faq-category" : [
+        "title"
+    ],
+
+    "akron/components/full/ak-faq-frame" : [
+        "faqTitle"
+    ],
+
+    "akron/components/full/ak-hero" : [
+        "blackTitle",
+        "blueTitle",
+        "secondBlackTitle",
+        "subtitle",
+        "description",
+        "ctaText"
+    ],
+
+    "akron/components/full/ak-investors-relations" : [
+        "subtitle",
+        "title",
+        "description",
+        "checkboxLabel"
+    ],
+
+    "akron/components/full/ak-logo-plus-more-info" : [
+        "title",
+        "imageAltText",
+        "description",
+        "ctaText"
+    ],
+
+    "akron/components/full/ak-plans-frame" : [
+        "subtitle",
+        "phoneNumber",
+        "viewDetails",
+        "promoCodeLabel",
+        "promoCodeModalTitle",
+        "promoCodeModalLabel"
+    ],
+
+    "akron/components/full/ak-small-hero" : [
+        "subtitle",
+        "description",
+        "title"
+    ]
+}

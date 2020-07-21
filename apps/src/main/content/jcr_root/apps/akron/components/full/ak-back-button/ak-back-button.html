@@ -1,0 +1,10 @@
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-unwrap>
+    <ak-back-button
+        data-sly-test.valid="${properties.text}"
+        data-sly-use.parser="com.energyharbor.akron.core.services.DialogDataParser"
+        aem-data="${parser.data}">
+    </ak-back-button>
+    <sly data-sly-call="${templates.placeholder @ isEmpty = !valid}"></sly>
+</sly>

@@ -1,0 +1,14 @@
+<div data-sly-use.component="ak-tabs-navigation.js">
+    <ak-tabs-navigation
+        is-edit="${component.isEdit}"
+        data-sly-use.parser="com.energyharbor.akron.core.services.DialogDataParser"
+        aem-data="${parser.data}">
+        <rwc-slot-list name="tab-list">
+            <div data-sly-repeat="${component.tabsArr}" data-sly-unwrap>
+                <rwc-slot>
+                    <sly data-sly-resource="${ item.parsys @ resourceType='wcm/foundation/components/parsys'}" data-sly-unwrap></sly>
+                </rwc-slot>
+            </div>
+        </rwc-slot-list>
+    </ak-tabs-navigation>
+</div>

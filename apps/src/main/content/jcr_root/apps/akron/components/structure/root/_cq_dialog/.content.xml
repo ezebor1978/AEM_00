@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Akron Root Page"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    mode="edit">
+<content jcr:primaryType="nt:unstructured"
+         sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <tabs jcr:primaryType="nt:unstructured"
+              granite:class="cq-siteadmin-admin-properties-tabs"
+              sling:resourceType="granite/ui/components/coral/foundation/tabs"
+              size="L">
+            <items jcr:primaryType="nt:unstructured">
+                <gtm
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Google Analytics"
+                    sling:orderBefore="thumbnail"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                            granite:class="page-template-theme-section"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <gtmfieldset
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Google Tag Manager"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    class="foundation-layout-util-vmargin"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <gtmdesc
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/text"
+                                                            text="Retrieve these two snippets from Google Tag Manager directly and enter them exactly as provided. The snippets will be injected into this page and all of this page's descendants."/>
+                                                    </items>
+                                                </column>
+                                                <gtmhead
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                    fieldLabel="Head Snippet"
+                                                    name="./gtmHead">
+                                                </gtmhead>
+                                                <gtmbody
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                    fieldLabel="Body Snippet"
+                                                    name="./gtmBody">
+                                                </gtmbody>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </gtmfieldset>
+                                <gsvfieldset
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Google Site Verification"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    class="foundation-layout-util-vmargin"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <gtmdesc
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/text"
+                                                            text="Retrieve these two snippets from Google Tag Manager directly and enter them exactly as provided. The snippets will be injected into this page and all of this page's descendants."/>
+                                                    </items>
+                                                </column>
+                                                <siteverification
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                    fieldLabel="Google Site Verification"
+                                                    fieldDescription="Optional. Obtained from Google Search Console. Select the 'HTML Tag' option for site verification and paste the full meta tag here. If you're using another site verification method, leave this "
+                                                    name="./googleSiteVerification">
+                                                </siteverification>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </gsvfieldset>
+                            </items>
+                        </column>
+                    </items>
+                </gtm>
+                <errors
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Errors"
+                    sling:orderBefore="advanced"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <fieldset
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Error Pages - Configuration"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <errorpages
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Error Pages"
+                                                    name="./errorPages"
+                                                    rootPath="/content"
+                                                    cq:showOnCreate="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </fieldset>
+                            </items>
+                        </column>
+                    </items>
+                </errors>
+                <cloudservices jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/include"
+                               path="/mnt/overlay/wcm/foundation/components/basicpage/v1/basicpage/tabs/cloudservices"/>
+                <personalization jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/include"
+                                 path="/mnt/overlay/wcm/foundation/components/basicpage/v1/basicpage/tabs/personalization"/>
+                <permissions jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/include"
+                             path="/mnt/overlay/wcm/core/content/sites/properties/tabs/permissions"/>
+            </items>
+        </tabs>
+    </items>
+</content>
+</jcr:root>
+
+

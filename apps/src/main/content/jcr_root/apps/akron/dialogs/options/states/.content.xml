@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <option1
+        jcr:primaryType="nt:unstructured"
+        text="Alabama"
+        value="AL" />
+
+    <option2
+        jcr:primaryType="nt:unstructured"
+        text="Alaska"
+        value="AK" />
+
+    <option3
+        jcr:primaryType="nt:unstructured"
+        text="Arizona"
+        value="AZ" />
+
+    <option4
+        jcr:primaryType="nt:unstructured"
+        text="Arkansas"
+        value="AR" />
+
+    <option5
+        jcr:primaryType="nt:unstructured"
+        text="California"
+        value="CA" />
+
+    <option6
+        jcr:primaryType="nt:unstructured"
+        text="Colorado"
+        value="CO" />
+
+    <option7
+        jcr:primaryType="nt:unstructured"
+        text="Connecticut"
+        value="CT" />
+
+    <option8
+        jcr:primaryType="nt:unstructured"
+        text="Delaware"
+        value="DE" />
+
+    <option9
+        jcr:primaryType="nt:unstructured"
+        text="District of Columbia"
+        value="DC" />
+
+    <option10
+        jcr:primaryType="nt:unstructured"
+        text="Florida"
+        value="FL" />
+
+    <option11
+        jcr:primaryType="nt:unstructured"
+        text="Georgia"
+        value="GA" />
+
+    <option12
+        jcr:primaryType="nt:unstructured"
+        text="Hawaii"
+        value="HI" />
+
+    <option13
+        jcr:primaryType="nt:unstructured"
+        text="Idaho"
+        value="ID" />
+
+    <option14
+        jcr:primaryType="nt:unstructured"
+        text="Illinois"
+        value="IL" />
+
+    <option15
+        jcr:primaryType="nt:unstructured"
+        text="Indiana"
+        value="IN" />
+
+    <option16
+        jcr:primaryType="nt:unstructured"
+        text="Iowa"
+        value="IA" />
+
+    <option17
+        jcr:primaryType="nt:unstructured"
+        text="Kansas"
+        value="KS" />
+
+    <option18
+        jcr:primaryType="nt:unstructured"
+        text="Kentucky"
+        value="KY" />
+
+    <option19
+        jcr:primaryType="nt:unstructured"
+        text="Louisiana"
+        value="LA" />
+
+    <option20
+        jcr:primaryType="nt:unstructured"
+        text="Maine"
+        value="ME" />
+
+    <option21
+        jcr:primaryType="nt:unstructured"
+        text="Maryland"
+        value="MD" />
+
+    <option22
+        jcr:primaryType="nt:unstructured"
+        text="Massachusetts"
+        value="MA" />
+
+    <option23
+        jcr:primaryType="nt:unstructured"
+        text="Michigan"
+        value="MI" />
+
+    <option24
+        jcr:primaryType="nt:unstructured"
+        text="Minnesota"
+        value="MN" />
+
+    <option25
+        jcr:primaryType="nt:unstructured"
+        text="Mississippi"
+        value="MS" />
+
+    <option26
+        jcr:primaryType="nt:unstructured"
+        text="Missouri"
+        value="MO" />
+
+    <option27
+        jcr:primaryType="nt:unstructured"
+        text="Montana"
+        value="MT" />
+
+    <option28
+        jcr:primaryType="nt:unstructured"
+        text="Nebraska"
+        value="NE" />
+
+    <option29
+        jcr:primaryType="nt:unstructured"
+        text="Nevada"
+        value="NV" />
+
+    <option30
+        jcr:primaryType="nt:unstructured"
+        text="New Hampshire"
+        value="NH" />
+
+    <option31
+        jcr:primaryType="nt:unstructured"
+        text="New Jersey"
+        value="NJ" />
+
+    <option32
+        jcr:primaryType="nt:unstructured"
+        text="New Mexico"
+        value="NM" />
+
+    <option33
+        jcr:primaryType="nt:unstructured"
+        text="New York"
+        value="NY" />
+
+    <option34
+        jcr:primaryType="nt:unstructured"
+        text="North Carolina"
+        value="NC" />
+
+    <option35
+        jcr:primaryType="nt:unstructured"
+        text="North Dakota"
+        value="ND" />
+
+    <option36
+        jcr:primaryType="nt:unstructured"
+        text="Ohio"
+        value="OH" />
+
+    <option37
+        jcr:primaryType="nt:unstructured"
+        text="Oklahoma"
+        value="OK" />
+
+    <option38
+        jcr:primaryType="nt:unstructured"
+        text="Oregon"
+        value="OR" />
+
+    <option39
+        jcr:primaryType="nt:unstructured"
+        text="Pennsylvania"
+        value="PA" />
+
+    <option40
+        jcr:primaryType="nt:unstructured"
+        text="Rhode Island"
+        value="RI" />
+
+    <option41
+        jcr:primaryType="nt:unstructured"
+        text="South Carolina"
+        value="SC" />
+
+    <option42
+        jcr:primaryType="nt:unstructured"
+        text="South Dakota"
+        value="SD" />
+
+    <option43
+        jcr:primaryType="nt:unstructured"
+        text="Tennessee"
+        value="TN" />
+
+    <option44
+        jcr:primaryType="nt:unstructured"
+        text="Texas"
+        value="TX" />
+
+    <option45
+        jcr:primaryType="nt:unstructured"
+        text="Utah"
+        value="UT" />
+
+    <option46
+        jcr:primaryType="nt:unstructured"
+        text="Vermont"
+        value="VT" />
+
+    <option47
+        jcr:primaryType="nt:unstructured"
+        text="Virginia"
+        value="VA" />
+
+    <option48
+        jcr:primaryType="nt:unstructured"
+        text="Washington"
+        value="WA" />
+
+    <option49
+        jcr:primaryType="nt:unstructured"
+        text="West Virginia"
+        value="WV" />
+
+    <option50
+        jcr:primaryType="nt:unstructured"
+        text="Wisconsin"
+        value="WI" />
+
+    <option51
+        jcr:primaryType="nt:unstructured"
+        text="Wyoming"
+        value="WY" />
+</jcr:root>

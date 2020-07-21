@@ -1,0 +1,25 @@
+<sly data-sly-use.head="head.js">
+    <meta charset="utf-8">
+    <title>${currentPage.pageTitle || currentPage.title || currentPage.name}</title>
+
+    <meta name="keywords" content="${head.keywords}"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="${properties.jcr:description}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    <meta data-sly-test="${head.ignored}" name="robots" content="noindex,nofollow"/>
+
+    <sly data-sly-use.linkchecker="com.energyharbor.akron.core.sightly.LinkCheckerConfiguration">
+        <meta data-sly-test="${linkchecker.stripHtmlExtension}" id="strip-html-extension" name="strip-html-extension" content="true"/>
+    </sly>
+
+    <!--Swiftype Metadata-->
+    <meta class="swiftype" name="language" data-type="string" content="${head.swiftype.lang}" />
+    <meta data-sly-test="${head.swiftype.pageDescription}" class="swiftype" name="description" data-type="string" content="${head.swiftype.pageDescription}" />
+    <meta class="swiftype" name="page_content" data-type="string" content="${head.swiftype.pageIndex.content}" />
+
+    <link data-sly-test="${head.favIcon}" rel="icon" href="${head.favIcon}"/>
+    <link data-sly-test="${head.canonicalUrl}" rel="canonical" href="${head.canonicalUrl}" />
+
+    ${inheritedPageProperties.gtmHead @ context = 'unsafe'}
+    ${inheritedPageProperties.googleSiteVerification @ context = 'unsafe'}
+</sly>

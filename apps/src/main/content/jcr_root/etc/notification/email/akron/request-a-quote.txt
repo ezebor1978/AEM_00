@@ -1,0 +1,32 @@
+Subject: Request A Quote
+
+Request a quote form submitted:
+
+Contact Information
+
+First Name: ${firstName}
+Last Name: ${lastName}
+Email: ${email}
+Phone Number: ${phoneNumber}
+Job Title: ${jobTitle}
+Company: ${company}
+Mailing Address: ${mailingAddress}
+State: ${state}
+City: ${city}
+Zip Code: ${zipCode}
+Preferred Method of Contact: ${preferredContact}
+
+
+Account Information
+
+Utility: ${utility}
+Approximate Monthly Bill: ${approximateMonthlyBill}
+Facility Type: ${facilityType}
+Business Type: ${businessType}
+Decision Timeframe: ${decisionTimeframe}
+
+
+Additional Information
+
+How did you hear about us?: ${howDidYouHear}
+Questions or Comments: ${questionsComments}

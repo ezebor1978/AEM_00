@@ -1,0 +1,15 @@
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-unwrap>
+    <ak-offer
+        data-sly-test.valid="${properties.title}"
+        data-sly-use.component="ak-bundle-offer.js"
+        data-sly-use.parser="com.energyharbor.akron.core.services.DialogDataParser"
+        aem-data="${parser.data}"
+        edc-name="${component.edcName}"
+        edc-logo="${component.edcLogo}"
+        is-bundle="${component.isBundle}"
+        offer-data="${component.offerData}">
+    </ak-offer>
+    <sly data-sly-call="${templates.placeholder @ isEmpty = !valid}"></sly>
+</sly>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured">
+    <left
+        jcr:primaryType="nt:unstructured"
+        text="Left"
+        value="left"/>
+    <center
+        jcr:primaryType="nt:unstructured"
+        text="Center"
+        value="center"/>
+    <right
+        jcr:primaryType="nt:unstructured"
+        text="Right"
+        value="right"/>
+</jcr:root>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Bundle Offer"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <tile
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tile Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured"
+                                               sling:hideChildren="[bundleOnly,price,priceLabel,priceDescription]">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                required="{Boolean}true"
+                                                maxlength="15"
+                                                fieldDescription="Limit of 15 characters"
+                                                name="./title"/>
+                                            <marketingTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Marketing Title"
+                                                required="{Boolean}true"
+                                                maxlength="40"
+                                                fieldDescription="Limit of 40 characters"
+                                                name="./marketingTitle"/>
+                                            <marketingTitleBackground
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                                fieldLabel="Marketing Title Background"
+                                                required="{Boolean}true"
+                                                name="./marketingBackground">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <background1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Gray"
+                                                        value="gray"
+                                                        selected="{Boolean}true"/>
+                                                    <background2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Blue"
+                                                        value="blue"/>
+                                                </items>
+                                            </marketingTitleBackground>
+                                            <icon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Icon (Next to the title)"
+                                                fieldDescription="Image must be 24x24 pixels"
+                                                fileNameParameter="./fileNameIcon"
+                                                fileReferenceParameter="./icon"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileNameIcon"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <duration
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Duration"
+                                                required="{Boolean}true"
+                                                maxlength="25"
+                                                fieldDescription="Limit of 25 characters"
+                                                name="./duration"/>
+                                            <orderOfPrecedence
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldLabel="Order of Precedence."
+                                                fieldDescription="Offers with lower numbers will appear first in the Offer page."
+                                                min="0"
+                                                required="{Boolean}true"
+                                                name="./precedence"/>
+                                            <bundleId
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Bundle Id"
+                                                required="{Boolean}true"
+                                                maxlength="25"
+                                                fieldDescription="The ID for bundle offers, this has to be a unique identifier across all bundle offers"
+                                                name="./bundleId"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </tile>
+                    <details
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Details (Drawer)"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <showDetails
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                text="Show Details drawer"
+                                                name="./showDetails"
+                                                value="{Boolean}true"
+                                                checked="{Boolean}false"/>
+                                            <moreDetailsDescription
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                useFixedInlineToolbar="{Boolean}true"
+                                                fieldLabel="Description to display at the top of the drawer"
+                                                fieldDescription="Limit of 150 characters"
+                                                name="./moreDetails">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="akron/dialogs/rte/standard/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="akron/dialogs/rte/standard/uiSettings"/>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-rte-limit="150">
+                                                </granite:data>
+                                            </moreDetailsDescription>
+                                            <bestFor
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                useFixedInlineToolbar="{Boolean}true"
+                                                fieldLabel="Content for the 'Who is this plan best for?' section"
+                                                fieldDescription="Limit of 150 characters"
+                                                name="./bestFor">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="akron/dialogs/rte/standard/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="akron/dialogs/rte/standard/uiSettings"/>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-rte-limit="150">
+                                                </granite:data>
+                                            </bestFor>
+                                            <priceBreakdown
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Content for the 'Price Breakdown' section">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./multifieldPriceBreakdown">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <label
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Price Label"
+                                                                    name="./priceLabel"/>
+                                                                <value
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Price Value"
+                                                                    name="./priceValue"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </priceBreakdown>
+                                            <greenOfferImage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Green Offer Image"
+                                                fieldDescription="Image must be 70x70 pixels"
+                                                fileNameParameter="./fileNameGreenOfferImage"
+                                                fileReferenceParameter="./greenOfferImage"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./fileNameGreenOfferImage"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <greenOfferText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                useFixedInlineToolbar="{Boolean}true"
+                                                fieldLabel="Green Offer Text"
+                                                fieldDescription="Limit of 500 characters"
+                                                name="./greenOfferText">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="akron/dialogs/rte/standard/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="akron/dialogs/rte/standard/uiSettings"/>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-rte-limit="500">
+                                                </granite:data>
+                                            </greenOfferText>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </details>
+                    <enrollment
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Enrollment"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured"
+                                               sling:hideChildren="[productId,priorityCode,edcCode]">
+                                            <gasProductId
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Gas Product ID"
+                                                fieldDescription="Must match the ID of the Product in the Database. It must be Unique."
+                                                required="{Boolean}true"
+                                                name="./gasProductId"/>
+                                            <gasIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Gas Icon"
+                                                fileNameParameter="./gasIconFile"
+                                                fileReferenceParameter="./gasIcon"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./gasIconFile"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"
+                                                required="{Boolean}true"/>
+                                            <electricityProductId
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Electricity Product ID"
+                                                fieldDescription="Must match the ID of the Product in the Database. It must be Unique."
+                                                required="{Boolean}true"
+                                                name="./electricityProductId"/>
+                                            <electricityIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Electricity Icon"
+                                                fileNameParameter="./electricityIconFile"
+                                                fileReferenceParameter="./electricityIcon"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./electricityIconFile"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"
+                                                required="{Boolean}true"/>
+                                            <edcProviders
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                required="{Boolean}true"
+                                                validation="multifield-max-2"
+                                                fieldDescription="Users can add up to two EDC Providers."
+                                                fieldLabel="Add the EDC Providers">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./multifieldEdcProviders">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <edcCode
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="EDC Code"
+                                                                    name="./edcCode"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </edcProviders>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </enrollment>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

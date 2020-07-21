@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Image Card"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <alignment
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Card layout"
+                                                name="./alignment">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/alignment"
+                                                    defaultValueSelected="left"
+                                                    valueToIgnore="right"/>
+                                            </alignment>
+                                            <image
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                fieldLabel="Main image"
+                                                fileNameParameter="./mainImageName"
+                                                fileReferenceParameter="./mainImageReference"
+                                                mimeTypes="[image]"
+                                                multiple="{Boolean}false"
+                                                name="./mainImage"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"
+                                                required="{Boolean}true"/>
+                                            <alt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Provide a textual alternative of the content and function of the image."
+                                                fieldLabel="Main image alternative text"
+                                                maxlength="200"
+                                                required="{Boolean}true"
+                                                name="./mainImageAltText"/>
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                maxlength="20"
+                                                fieldDescription="Limit of 20 characters"
+                                                required="{Boolean}true"
+                                                name="./title"/>
+                                            <headingLevel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Title heading type"
+                                                name="./headingLevel"
+                                                required="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/headings"
+                                                    defaultValueSelected="h1"
+                                                    valueToIgnore="none"/>
+                                            </headingLevel>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Description"
+                                                maxlength="100"
+                                                fieldDescription="Limit of 100 characters"
+                                                name="./description"/>
+<!--                                            <thumbnail-->
+<!--                                                jcr:primaryType="nt:unstructured"-->
+<!--                                                sling:resourceType="granite/ui/components/foundation/form/fileupload"-->
+<!--                                                fieldLabel="Thumbnail image"-->
+<!--                                                fileNameParameter="./thumbnailName"-->
+<!--                                                fileReferenceParameter="./thumbnailReference"-->
+<!--                                                mimeTypes="[image]"-->
+<!--                                                multiple="{Boolean}false"-->
+<!--                                                name="./thumbnail"-->
+<!--                                                uploadUrl="${suffix.path}"-->
+<!--                                                useHTML5="{Boolean}true"/>-->
+<!--                                            <thumbnail-alt-->
+<!--                                                jcr:primaryType="nt:unstructured"-->
+<!--                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"-->
+<!--                                                fieldDescription="Provide a textual alternative of the content and function of the image."-->
+<!--                                                fieldLabel="Thumbnail alternative text"-->
+<!--                                                maxlength="200"-->
+<!--                                                name="./thumbnailAltText"/>-->
+<!--                                            <thumbnail-text-->
+<!--                                                jcr:primaryType="nt:unstructured"-->
+<!--                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"-->
+<!--                                                fieldLabel="Thumbnail text"-->
+<!--                                                maxlength="25"-->
+<!--                                                name="./thumbnailText"/>-->
+                                            <cta-text
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA Text"
+                                                fieldDescription="Limit of 20 characters"
+                                                maxlength="20"
+                                                name="./ctaText"
+                                                required="{Boolean}true"/>
+                                            <cta-link
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                fieldLabel="CTA Link"
+                                                name="./ctaLink"
+                                                rootPath="/content/akron"
+                                                required="{Boolean}true"/>
+                                            <cta-link-target
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                name="./ctaLinkTarget"
+                                                fieldLabel="CTA Target"
+                                                required="{Boolean}true">
+                                                <datasource
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="akron/datasources/dropdown"
+                                                    path="/apps/akron/dialogs/options/target-options"
+                                                    defaultValueSelected="internal"/>
+                                            </cta-link-target>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,10 @@
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-unwrap>
+    <ak-biography-card
+        data-sly-use.component="ak-biography-card.js"
+        data-sly-test.valid="${component.valid}"
+        aem-data="${component.biography}">
+    </ak-biography-card>
+    <sly data-sly-call="${templates.placeholder @ isEmpty = !valid}"></sly>
+</sly>

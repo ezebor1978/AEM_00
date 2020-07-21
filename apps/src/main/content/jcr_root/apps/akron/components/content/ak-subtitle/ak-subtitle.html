@@ -1,0 +1,9 @@
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.text="${properties.text}"
+>
+    <p style="color: ${properties.color @ context='styleToken'};" class="base-text base-text--alignment-${properties.alignment} base-text--type-sub">${properties.text}</p>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !text, classAppend=''}"></sly>
+
+
